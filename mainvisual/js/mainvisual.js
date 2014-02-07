@@ -177,9 +177,6 @@ var MainVisual = (function ($) {
                     cache: false,
                     async: false,
                     timeout: 5000,
-                    data: {
-                        xml: xml
-                    },
                     success: function (xml) {
                         _json = _this.transJson(xml);
                         // debug code
