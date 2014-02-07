@@ -172,7 +172,7 @@ var MainVisual = (function ($) {
             try {
                 $.ajax({
                     url: filePass,
-                    type: 'POST',
+                    type: 'GET',
                     dataType: 'xml',
                     cache: false,
                     async: false,
