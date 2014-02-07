@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>MainVisual</title>
+<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/mainvisual.js"></script>
+<style type="text/css">
+body {
+    	padding-top:70px;
+    }
+</style>
+<script>
+	$(function () {
+		var mainVisual = new MainVisual();
+		mainVisual.loadXML("data.xml");
+		mainVisual.renderViewHTML(mainVisual.model);
+		mainVisual.renderPaginationHTML(mainVisual.model);
+		mainVisual.initFade();
+	});
+</script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+
+            </button> <a class="navbar-brand" href="#">MainVisual</a>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="target col-xs-12 col-sm-9">
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            </p>
+            <!-- banner area -->
+            <div id="mainView" class="visual" style="position:relative; height:286px; width:100%; overflow:hidden;"></div>
+            <ul id="pagination" class="pagination" style="float:right"></ul>
+            <ul class="pager" style="clear:both">
+                <li class="previous"><a id="left" href="#">&larr; Older</a>
+
+                </li>
+                <li class="next"><a id="right" href="#">Newer &rarr;</a>
+
+                </li>
+            </ul>
+            <!-- banner area -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feature>
+	<visual>
+		<mainVisual src="/images/mainvisual_guide_index_16.jpg" alt="" />
+		<anchor href="" target="_self" />
+		<arrow src1="" src2=""/>
+	</visual>
+	<visual>
+		<mainVisual src="/images/mainvisual_guide_index_12.jpg" alt="" />
+		<anchor href="" target="_self" />
+		<arrow src1="" src2=""/>
+	</visual>
+	<visual>
+		<mainVisual src="/images/mainvisual_guide_index_05.jpg" alt="" />
+		<anchor href="" target="_self" />
+		<arrow src1="" src2=""/>
+	</visual>
+	<visual>
+		<mainVisual src="/images/mainvisual_guide_index_18.jpg" alt="" />
+		<anchor href="" target="_self" />
+		<arrow src1="" src2=""/>
+	</visual>
+	<visual>
+		<mainVisual src="/images/mainvisual_guide_index_17.jpg" alt="" />
+		<anchor href="" target="_self" />
+		<arrow src1="" src2=""/>
+	</visual>
+	<visual>
+		<mainVisual src="/images/mainvisual_guide_index_02.jpg" alt="" />
+		<anchor href="" target="_self" />
+		<arrow src1="" src2=""/>
+	</visual>
+</feature>
