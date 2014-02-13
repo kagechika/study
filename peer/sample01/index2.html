@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>sample2-2</title>
+<meta charset="utf-8">
+<script src="http://cdn.peerjs.com/0/peer.min.js"></script>
+<script>
+    var selfId = "SenderID";
+    var againstId = "ReceiverID";
+    var conn;
+    var peer = new Peer(selfId, {key: 't8ougf3fx5xt7qfr'});
+    function connect(c) {
+        conn = c;
+        conn.on('data', function(data){
+            document.getElementById("receive_message").innerHTML += againstId + ":" + data + "<br />";
+        });
+        conn.on('close', function(err){ alert(conn.peer + ' has left the chat.') });
+    };
+    function sendMessage(){
+        document.getElementById("receive_message").innerHTML += selfId + ":" + document.getElementById("message").value + "<br />";
+        conn.send(document.getElementById("message").value);
+	}
+    function onBodyLoad(){
+        var c = peer.connect(againstId, {serialization: 'binary-utf8'});
+        c.on('open', function(){
+          connect(c);
+        });
+    }
+</script>
+<body onload="onBodyLoad();">
+    <h1>Getter</h1>
+    <input type="text" id="message"><input type="button" onClick="sendMessage();" value="送る" />
+    <div id="receive_message"></div>
+</body>
+</html>
