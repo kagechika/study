@@ -36,7 +36,7 @@
             </div>
           </div>
 
-          <div class="inner cover">
+          <div id="view" class="inner cover">
             <h1 class="cover-heading">Touch Event Library.</h1>
             <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
             <p class="lead">
@@ -63,7 +63,7 @@
     <script src="js/touch.js"></script>
     <script type="text/javascript">
         $(function(){
-            var te = new TouchEvent($, window);
+            var te = new TouchEvent($, $("#view"));
         });
     </script>
   </body>
