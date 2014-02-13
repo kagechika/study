@@ -7,7 +7,12 @@
     var selfId = "ReceiverID";
     var againstId = "SenderID";
     var conn;
+
+    // create peer object
     var peer = new Peer(selfId, {key: 't8ougf3fx5xt7qfr'});
+    
+    // conection another peer
+    // @parameter c:id
     function connect(c) {
         conn = c;
         conn.on('data', function(data){
@@ -19,7 +24,10 @@
         document.getElementById("receive_message").innerHTML += selfId + ":" + document.getElementById("message").value + "<br />";
         conn.send(document.getElementById("message").value);
 	}
+
+    // recive connect another peer
     peer.on('connection', connect);
+
 </script>
 <body>
     <h1>Sender</h1>
