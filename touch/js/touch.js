@@ -66,6 +66,7 @@ var TouchEvent = (function($, target){
                     $(_self).trigger(key);
                 });
                 
+                $(this).unbind(mhandler, ehandler);
             });
 
         })(this.startHandler, this.moveHandler);
